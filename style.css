@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #000; 
+    background: url('galaxy.gif') no-repeat center center fixed;
+    background-size: cover;
+
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll; 
+}
+
+.timeline-container {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+.line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 91%;
+    background: #ffffff7c;
+    transform: translateX(-50%);
+}
+
+.event {
+    position: relative;
+    opacity: 0;
+    margin: 50px 2;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.event:nth-child(1) { animation-delay: 1s; }
+.event:nth-child(2) { animation-delay: 2s; }
+.event:nth-child(3) { animation-delay: 3s; }
+.event:nth-child(4) { animation-delay: 4s; }
+.event:nth-child(5) { animation-delay: 5s; }
+.event:nth-child(6) { animation-delay: 6s; }
+
+.event.left {
+    left: -50%;
+    text-align: center;
+    transform: translateX(-20%);
+}
+
+.event.right {
+    left: 50%;
+    text-align: center;
+    transform: translateX(20%);
+}
+
+
+.content {
+display: inline-block;
+background: rgba(0, 0, 0, 0.9); 
+border-radius: 8px;
+padding: 15px;
+border: 1px solid #444; 
+box-shadow: 0 4px 8px rgba(255, 255, 255, 0.321); 
+max-width: 700px;
+text-align: center;
+word-wrap: break-word;
+color: #fffcfc; 
+opacity: 75%;
+}
+
+blockquote {
+background: rgba(0, 0, 0, 0.123); 
+font-style: italic;
+margin: 10px 0;
+padding: 15px;
+border-left: 4px solid #ffffff; 
+line-height: 1.6;
+text-align: center;
+color: #c9c7c7; 
+}
+
+.event h3 {
+    margin: 0;
+    font-size: 18px;
+    text-align: center; 
+}
+
+.event a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.event a:hover {
+    text-decoration: underline;
+}
+
+footer {
+background: rgb(0, 0, 0); 
+color: #fff; 
+text-align: center; 
+padding: 1px 1px; 
+position: relative; 
+width: 100%; 
+box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); 
+margin-top: 50px; 
+opacity: 50%;
+}
+
+
+footer a {
+color: #ffffff; 
+text-decoration: none;
+font-weight: bold;
+}
+
+footer a:hover {
+text-decoration: underline;
+}
+.audio-container {
+    text-align: center; 
+    padding: 20px;     
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
